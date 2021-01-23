@@ -10,7 +10,7 @@ public class O extends MobileOperator{
     @Override
     public double call(String code, String number, double minute) {
         System.out.println("Calling (" + code + ")" + number);
-        double callPrice = getCallPrice();
+        double callPrice = getCallPrice(code, minute);
         System.out.println("Call price " + callPrice);
         return callPrice;
     }
@@ -19,11 +19,13 @@ public class O extends MobileOperator{
     public double sendSms(String code, String number, String smsText) {
         System.out.println("Sending sms  to (" + code + ")" + number);
         System.out.println("Receiving a report");
-        System.out.println("");
+        System.out.println("Receiving a gift: 3 free minutes");
+        return getSmsPrice();
     }
 
     @Override
     public double useInternet(double amount) {
-        return super.useInternet(amount);
+        System.out.println("Using " + amount + " GB of Internet from O!");
+        return getInternetPrice(amount);
     }
 }

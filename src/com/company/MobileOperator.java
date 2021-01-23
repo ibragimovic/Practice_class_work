@@ -77,4 +77,12 @@ public class MobileOperator {
     public void setGbPrice(double gbPrice) {
         this.gbPrice = gbPrice;
     }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 }

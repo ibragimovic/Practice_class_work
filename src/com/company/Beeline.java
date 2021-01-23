@@ -23,6 +23,6 @@ public class Beeline extends MobileOperator{
     @Override
     public double useInternet(double amount) {
         System.out.println("Using " + amount + " GB of Internet from Beeline");
-        return getGbPrice();
+        return getInternetPrice(amount);
     }
 }
